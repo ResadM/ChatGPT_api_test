@@ -40,8 +40,11 @@ app.post("/", async (req, res) => {
       bot: response.data.choices[0].text,
     });
   } catch (error) {
-    console.error(error);
-    res.status(500).send(error || "Something went wrong");
+    //console.error(error);
+    //res.status(500).send(error || "Something went wrong");
+    res
+      .status(500)
+      .send("Test müddəti bitdiyi üçün müvəqqəti olaraq servis dayandırıldı.");
   }
 });
 
